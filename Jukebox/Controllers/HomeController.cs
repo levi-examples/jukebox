@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using Jukebox.Models;
 
 namespace Jukebox.Controllers
 {
@@ -15,10 +13,20 @@ namespace Jukebox.Controllers
             return View();
         }
 
-        public ActionResult Welcome()
+        public ActionResult Artists()
         {
-            ViewBag.Message = "Happy!!!";
-            return View();
+            var id = 0;
+            var artists = new List<Artist>
+            {
+                new Artist {Id = ++id, Name = "10,000 Maniacs"},
+                new Artist {Id = ++id, Name = "2Pac"},
+                new Artist {Id = ++id, Name = "Incubus"},
+                new Artist {Id = ++id, Name = "Tool"},
+                new Artist {Id = ++id, Name = "Your Mom"},
+                new Artist {Id = ++id, Name = "Ward's Mom"},
+            };
+
+            return Json(artists, JsonRequestBehavior.AllowGet);
         }
 	}
 }

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/
 
@@ -63,7 +63,7 @@ angular.module('ui.bootstrap.transition', [])
     return deferred.promise;
   };
 
-  // Work out the name of the transitionEnd event
+  // Work out the AlbumName of the transitionEnd event
   var transElement = document.createElement('trans');
   var transitionEndEventNames = {
     'WebkitTransition': 'webkitTransitionEnd',
@@ -403,7 +403,7 @@ angular.module('ui.bootstrap.buttons', [])
 
 /**
 * @ngdoc overview
-* @name ui.bootstrap.carousel
+* @AlbumName ui.bootstrap.carousel
 *
 * @description
 * AngularJS version of an image carousel.
@@ -576,7 +576,7 @@ angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
 
 /**
  * @ngdoc directive
- * @name ui.bootstrap.carousel.directive:carousel
+ * @AlbumName ui.bootstrap.carousel.directive:carousel
  * @restrict EA
  *
  * @description
@@ -588,7 +588,7 @@ angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
  *
  * @example
 <example module="ui.bootstrap">
-  <file name="index.html">
+  <file AlbumName="index.html">
     <carousel>
       <slide>
         <img src="http://placekitten.com/150/150" style="margin:auto;">
@@ -630,7 +630,7 @@ angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
 
 /**
  * @ngdoc directive
- * @name ui.bootstrap.carousel.directive:slide
+ * @AlbumName ui.bootstrap.carousel.directive:slide
  * @restrict EA
  *
  * @description
@@ -640,7 +640,7 @@ angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
  *
  * @example
 <example module="ui.bootstrap">
-  <file name="index.html">
+  <file AlbumName="index.html">
 <div ng-controller="CarouselDemoCtrl">
   <carousel>
     <slide ng-repeat="slide in slides" active="slide.active">
@@ -655,12 +655,12 @@ angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
   <br />Enter a negative number to stop the interval.
 </div>
   </file>
-  <file name="script.js">
+  <file AlbumName="script.js">
 function CarouselDemoCtrl($scope) {
   $scope.myInterval = 5000;
 }
   </file>
-  <file name="demo.css">
+  <file AlbumName="demo.css">
     .carousel-indicators {
       top: auto;
       bottom: 15px;
@@ -2940,7 +2940,7 @@ angular.module('ui.bootstrap.rating', [])
 
 /**
  * @ngdoc overview
- * @name ui.bootstrap.tabs
+ * @AlbumName ui.bootstrap.tabs
  *
  * @description
  * AngularJS version of the tabs directive.
@@ -2988,7 +2988,7 @@ angular.module('ui.bootstrap.tabs', [])
 
 /**
  * @ngdoc directive
- * @name ui.bootstrap.tabs.directive:tabset
+ * @AlbumName ui.bootstrap.tabs.directive:tabset
  * @restrict EA
  *
  * @description
@@ -2999,7 +2999,7 @@ angular.module('ui.bootstrap.tabs', [])
  *
  * @example
 <example module="ui.bootstrap">
-  <file name="index.html">
+  <file AlbumName="index.html">
     <tabset>
       <tab heading="Tab 1"><b>First</b> Content!</tab>
       <tab heading="Tab 2"><i>Second</i> Content!</tab>
@@ -3035,7 +3035,7 @@ angular.module('ui.bootstrap.tabs', [])
 
 /**
  * @ngdoc directive
- * @name ui.bootstrap.tabs.directive:tab
+ * @AlbumName ui.bootstrap.tabs.directive:tab
  * @restrict EA
  *
  * @param {string=} heading The visible heading, or title, of the tab. Set HTML headings with {@link ui.bootstrap.tabs.directive:tabHeading tabHeading}.
@@ -3048,7 +3048,7 @@ angular.module('ui.bootstrap.tabs', [])
  *
  * @example
 <example module="ui.bootstrap">
-  <file name="index.html">
+  <file AlbumName="index.html">
     <div ng-controller="TabsDemoCtrl">
       <button class="btn btn-small" ng-click="items[0].active = true">
         Select item 1, using active binding
@@ -3072,7 +3072,7 @@ angular.module('ui.bootstrap.tabs', [])
       </tabset>
     </div>
   </file>
-  <file name="script.js">
+  <file AlbumName="script.js">
     function TabsDemoCtrl($scope) {
       $scope.items = [
         { title:"Dynamic Title 1", content:"Dynamic Item 0" },
@@ -3091,7 +3091,7 @@ angular.module('ui.bootstrap.tabs', [])
 
 /**
  * @ngdoc directive
- * @name ui.bootstrap.tabs.directive:tabHeading
+ * @AlbumName ui.bootstrap.tabs.directive:tabHeading
  * @restrict EA
  *
  * @description
@@ -3099,7 +3099,7 @@ angular.module('ui.bootstrap.tabs', [])
  *
  * @example
 <example module="ui.bootstrap">
-  <file name="index.html">
+  <file AlbumName="index.html">
     <tabset>
       <tab>
         <tab-heading><b>HTML</b> in my titles?!</tab-heading>
