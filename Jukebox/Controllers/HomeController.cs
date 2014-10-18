@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using Jukebox.Data.Repositories;
 using Ninject;
 using Northwoods.Data.NHibernate;
@@ -21,7 +22,11 @@ namespace Jukebox.Controllers
         {
             using (UnitOfWorkFactory.StartUnitOfWork<Data.Config.Jukebox>())
             {
-                return Json(Repository.All(), JsonRequestBehavior.AllowGet);
+                var handfulOfArtists = Repository.All()
+                    .Skip(100).Take(100)
+                    .ToList();
+
+                return Json(handfulOfArtists, JsonRequestBehavior.AllowGet);
             }
         }
 	}

@@ -25,11 +25,11 @@ namespace Jukebox.Data.Repositories
             return (Artist)_broker.Create(new Artist { Name = name });
         }
 
-        public List<Artist> All()
+        public IQueryable<Artist> All()
         {
             return _broker.Query<Artist>()
                 .OrderBy(x => x.Name)
-                .ToList();
+                .AsQueryable();
         }
     }
 }
