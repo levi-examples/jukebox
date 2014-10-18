@@ -4,7 +4,7 @@ using NHibernate.Dialect;
 using NHibernate.Driver;
 using Northwoods.Data.NHibernate;
 
-namespace Jukebox.Data
+namespace Jukebox.Data.Config
 {
     public class Jukebox : SessionConfiguration
     {
@@ -25,7 +25,7 @@ namespace Jukebox.Data
             get { return string.Format("Data Source={0};Version=3;", DatabaseFile); }
         }
 
-        public string DatabaseFile
+        public static string DatabaseFile
         {
             get { return _databaseFile ?? Properties.Settings.Default.DatabaseFile; }
             set { _databaseFile = value; }

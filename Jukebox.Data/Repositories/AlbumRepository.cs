@@ -6,9 +6,9 @@ namespace Jukebox.Data.Repositories
 {
     public class AlbumRepository
     {
-        private readonly PersistenceBroker<Jukebox> _broker;
+        private readonly PersistenceBroker<Config.Jukebox> _broker;
 
-        public AlbumRepository(PersistenceBroker<Jukebox> broker)
+        public AlbumRepository(PersistenceBroker<Config.Jukebox> broker)
         {
             _broker = broker;
         }
