@@ -1,4 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.Diagnostics;
+using System.IO;
+using System.Runtime.Remoting.Channels;
 using System.Web.Mvc;
 using System.Web.Routing;
 using NHibernate.Cfg;
@@ -16,12 +19,12 @@ namespace Jukebox
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            InitializeDatabase(Server.MapPath("~/jukebox.db"));
+            InitializeDatabase();
         }
 
-        private static void InitializeDatabase(string databasePath)
+        private void InitializeDatabase()
         {
-            Data.Config.Jukebox.DatabaseFile = databasePath;
+            Data.Config.Jukebox.DatabaseFile = Server.MapPath("~/jukebox.db");
             if (File.Exists(Data.Config.Jukebox.DatabaseFile)) return;
 
             using (var kernel = new StandardKernel(new NhDataModule()))
