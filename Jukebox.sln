@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jukebox", "Jukebox\Jukebox.csproj", "{CE364485-48FB-46C4-95A4-8BF7BE1F3833}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jukebox.Data", "Jukebox.Data\Jukebox.Data.csproj", "{197122AE-54F1-402B-BAD9-2ADECA70A29B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CE364485-48FB-46C4-95A4-8BF7BE1F3833}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE364485-48FB-46C4-95A4-8BF7BE1F3833}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE364485-48FB-46C4-95A4-8BF7BE1F3833}.Release|Any CPU.Build.0 = Release|Any CPU
+		{197122AE-54F1-402B-BAD9-2ADECA70A29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{197122AE-54F1-402B-BAD9-2ADECA70A29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{197122AE-54F1-402B-BAD9-2ADECA70A29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{197122AE-54F1-402B-BAD9-2ADECA70A29B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
