@@ -3,20 +3,4 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Artists</h2>
-<div ng-controller="artists" data-ng-init="load()">
-    <div class="row">
-        <div ng-repeat="artist in artists">
-            <div class="col-md-3 col-sm-3">
-                <a href='/Artist/{{artist.Id}}'>
-                    <img src="http://placehold.it/200x200" />
-                    <p>{{artist.Name}}</p>
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    <div>{{errors}}</div>
-
-</div>
-
+<div ng-view></div>
