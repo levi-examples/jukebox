@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Jukebox.Data.Models;
+using NHibernate.Linq;
 using Northwoods.Data.NHibernate;
 
 namespace Jukebox.Data.Repositories
@@ -30,6 +31,14 @@ namespace Jukebox.Data.Repositories
             return _broker.Query<Artist>()
                 .OrderBy(x => x.Name)
                 .AsQueryable();
+        }
+
+        public IList<Album> AlbumsFor(int id)
+        {
+            return _broker.Query<Album>()
+                .Where(x => x.Artist.Id == id)
+                .Fetch(x => x.Artist)
+                .ToList();
         }
     }
 }

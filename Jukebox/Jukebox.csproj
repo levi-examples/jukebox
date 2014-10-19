@@ -126,6 +126,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\modern-business.css" />
     <Content Include="Global.asax" />
+    <Content Include="partials\albums.html" />
     <Content Include="partials\artists.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
