@@ -126,6 +126,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\modern-business.css" />
     <Content Include="Global.asax" />
+    <Content Include="partials\album-detail.html" />
     <Content Include="partials\albums.html" />
     <Content Include="partials\artists.html" />
     <Content Include="Scripts\angular-mocks.js" />
@@ -143,6 +144,7 @@
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\ArtistController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -169,6 +171,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Album\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Jukebox.Data\Jukebox.Data.csproj">

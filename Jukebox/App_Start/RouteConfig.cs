@@ -10,8 +10,8 @@ namespace Jukebox
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Artist",
-                url: "artist/{id}/{action}",
+                name: "Details",
+                url: "{controller}/{id}/{action}",
                 defaults: new { controller = "Artist" }
             );
 

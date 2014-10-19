@@ -1,5 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using Jukebox.Data.Models;
+using NHibernate.Linq;
 using Northwoods.Data.NHibernate;
 
 namespace Jukebox.Data.Repositories
@@ -27,6 +30,15 @@ namespace Jukebox.Data.Repositories
                 .FirstOrDefault(x => x.Album == album && x.Name.Equals(songTitle));
 
             return title ?? Create(album, songTitle);
+        }
+
+        public IList<Title> TitlesFor(int id)
+        {
+            return _broker.Query<Title>()
+                .Where(x => x.Album.Id == id)
+                .Fetch(x => x.Album)
+                .ThenFetch(x => x.Artist)
+                .ToList();
         }
 
         private Album Create(Artist artist, string albumName, string albumYear)
