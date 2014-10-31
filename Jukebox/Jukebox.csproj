@@ -162,6 +162,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="jukebox.db" />
+    <None Include="Properties\PublishProfiles\levi-jukebox.pubxml" />
+    <None Include="Properties\PublishProfiles\vm-web-app1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
