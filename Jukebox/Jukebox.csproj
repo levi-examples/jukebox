@@ -126,6 +126,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\modern-business.css" />
     <Content Include="Global.asax" />
+    <Content Include="partials\album-detail.html" />
+    <Content Include="partials\albums.html" />
     <Content Include="partials\artists.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
@@ -142,6 +144,7 @@
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\ArtistController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -159,6 +162,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="jukebox.db" />
+    <None Include="Properties\PublishProfiles\levi-jukebox.pubxml" />
+    <None Include="Properties\PublishProfiles\vm-web-app1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -168,6 +174,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Album\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Jukebox.Data\Jukebox.Data.csproj">

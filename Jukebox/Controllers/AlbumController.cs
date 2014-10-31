@@ -5,17 +5,17 @@ using Northwoods.Data.NHibernate;
 
 namespace Jukebox.Controllers
 {
-    public class ArtistController : Controller
+    public class AlbumController : Controller
     {
         [Inject] public UnitOfWorkFactory UnitOfWorkFactory { get; set; }
-        [Inject] public ArtistRepository ArtistRepository { get; set; }
+        [Inject] public AlbumRepository AlbumRepository { get; set; }
 
-        public ActionResult Albums(int id)
+        public ActionResult Titles(int id)
         {
             using (UnitOfWorkFactory.StartUnitOfWork<Data.Config.Jukebox>())
             {
-                return Json(ArtistRepository.AlbumsFor(id), JsonRequestBehavior.AllowGet);
+                return Json(AlbumRepository.TitlesFor(id), JsonRequestBehavior.AllowGet);
             }
         }
-	}
+    }
 }

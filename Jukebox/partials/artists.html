@@ -1,12 +1,11 @@
 ﻿<h2>Artists</h2>
+
 <div data-ng-init="load()">
     <div class="row">
         <div ng-repeat="artist in artists">
-            <div class="col-md-3 col-sm-3">
-                <a href='/Artist/{{artist.Id}}'>
-                    <img src="http://placehold.it/200x200" />
-                    <p>{{artist.Name}}</p>
-                </a>
+            <div style class="col-md-4 col-sm-4">
+                <a href='#/artist/{{artist.Id}}/albums'><img src="http://placehold.it/300x150" /></a>
+                <p>{{artist.Name}}</p>
             </div>
         </div>
     </div>

@@ -1,0 +1,32 @@
+﻿<ol class="breadcrumb">
+    <li><a href="#/artists">All</a></li>
+    <li><a href="#/artist/{{artist.Id}}/albums">{{artist.Name}}</a></li>
+    <li class="active">{{album.Name}}</li>
+</ol>
+
+<h2>{{artist.Name}} ({{album.Name}})</h2>
+
+<div data-ng-init="load()">
+    <img src="http://placehold.it/200x200" />
+
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Year</th>
+                <th>Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="title in titles">
+                <td>{{artist.Name}}</td>
+                <td>{{album.Name}}</td>
+                <td>{{album.Year}}</td>
+                <td>{{title.Name}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>{{errors}}</div>
+</div>

@@ -1,0 +1,19 @@
+﻿<ol class="breadcrumb">
+    <li><a href="#/artists">All</a></li>
+    <li class="active">{{artist.Name}}</li>
+</ol>
+
+<h2>{{artist.Name}}</h2>
+
+<div data-ng-init="load()">
+    <div class="row">
+        <div ng-repeat="album in albums">
+            <div class="col-md-4 col-sm-4">
+                <a href="#/album/{{album.Id}}/titles"><img src="http://placehold.it/200x200" /></a>
+                <p>{{album.Name}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div>{{errors}}</div>
+</div>
